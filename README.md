@@ -120,7 +120,7 @@
 * Image - Изображение.
 * Sticker - Стикер.
 
-#### **Типы “Live”событий (LiveType):**
+#### **Типы "Live"событий (LiveType):**
 
 * Follow
 * UnFollow
@@ -133,15 +133,15 @@
 * Raid
 * Winner
 
-#### **Типы валют для  “Live”событий типа “Reward” или “Support” (CurrencyType):**
+#### **Типы валют для  "Live"событий типа "Reward" или "Support" (CurrencyType):**
 
-* ChannelPoints - “Баллы канала (Twitch)”.
-* Mana - “Мана (Trovo)”.
-* Lemon - “Лимоны (DLive)”.
-* Bits - “Bits (Twitch)”.
-* Elixir  - “Эликсир (Trovo)”.
-* Diamond - “Алмазы (Bigo)”.
-* OK - “OK (Одноклассники)”.
+* ChannelPoints - "Баллы канала (Twitch)".
+* Mana - "Мана (Trovo)".
+* Lemon - "Лимоны (DLive)".
+* Bits - "Bits (Twitch)".
+* Elixir  - "Эликсир (Trovo)".
+* Diamond - "Алмазы (Bigo)".
+* OK - "OK (Одноклассники)".
 
 
 #### **Удаление сообщения (DeleteMessage):**
