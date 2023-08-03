@@ -40,27 +40,27 @@
 
 ```
 {
-  "Service": "Service",
-  "GUID": "4da6dd37-158c-4c17-bf8c-2277d568417d",
-  "Date": "1973-01-01T00:00:00.000+00:00",
-  "UserName": "MegaXa",
-  "UserID": "0",
-  "Color": "#323232",
+  "Service": "Service", // Сервис.
+  "GUID": "4da6dd37-158c-4c17-bf8c-2277d568417d", // Идентификатор сообщения.
+  "Date": "1973-01-01T00:00:00.000+00:00", // Время получения сообщения. Время в формате ISO 8601 Extended.
+  "UserName": "MegaXa", // Имя пользователя.
+  "UserID": "0", // Идентификатор пользователя.
+  "Color": "#323232", // Цвет имени пользователя.
   "Badges": [
     {
       "Text": "Новый спонсор",
       "Image": {
-        "Default": "https://megaxa.ru/badge.png",
-        "Large": "https://megaxa.ru/badge2X.png"
+        "Default": "https://megaxa.ru/badge.png", // Ссылка на изображение бейджика.
+        "Large": "https://megaxa.ru/badge2X.png" // Ссылка на увеличенное изображение бейджика.
       }
     }
   ],
-  "MessageKit": [
+  "MessageKit": [ // Конструктор сообщения.
     {
-      "Type": "MessageKitType",
+      "Type": "MessageKitType", // Тип части сообщения (Text, Emoticon, URL, Image, Sticker).
       "Data": {
-        "Text": ":200IQ:",
-        "URL": "https://megaxa.ru/",
+        "Text": ":200IQ:", // Текст.
+        "URL": "https://megaxa.ru/", // Ссылка (Image, URL, Sticker).
         "Image": {
           "Default": "https://megaxa.ru/emoticon.png",
           "Large": "https://megaxa.ru/emoticon2X.png"
@@ -72,15 +72,15 @@
     "Default": "https://megaxa.ru/avatar.png",
     "Large": "https://megaxa.ru/avatar2X.png"
   },
-  "Roles": [
+  "Roles": [ // Список ролей отправителя сообщения.
     "Owner",
     "Subscriber"
   ],
-  "Reply": false,
-  "Meta": {
-    "Me": false,
-    "Login": "megaxa",
-    "Highlighted": false
+  "Reply": false, // Содержит ли сообщение обращение к владельцу канала.
+  "Meta": { // Метаданные для сообщения.
+    "Me": false, // Сообщение отправлено с тегом "/me". Twitch.
+    "Login": "megaxa", // Логин. (Если отличается от отображаемого имени.)
+    "Highlighted": false // Выделенное сообщение.
   }
 }
 ```
@@ -159,11 +159,11 @@
 
 ```
 {
-  "Type": "WidgetProperties",
+  "Type": "WidgetProperties", // Тип виджета (Chat, Widget, Plugin).
   "Data": {
     "Type": "Chat",
-    "FolderName": "Dev",
-    "ID": 0
+    "FolderName": "Dev", // Имя каталога с виджетом.
+    "ID": 0 // Номер профиля виджета.
   }
 }
 ```
@@ -176,7 +176,7 @@
   "Data": {
     "Service": "Service",
     "Message": "Сообщение для отправки.",
-    "Hide": false
+    "Hide": false  // Не отображать отправленное сообщение в MiniChat.
   }
 }
 ```
@@ -216,10 +216,10 @@ VoiceArray = [ 'Maxim', 'Tatyana', 'Alice', 'Marusia', 'Svetlana', 'Dmitry', 'Er
 {
   "Type": "Speak",
   "Data": {
-    "GUID": "00000000-0000-0000-0000-000000000000",
-    "Message": "Тест озвучки",
-    "Voice": "Голос",
-    "Pitch": "0"
+    "GUID": "00000000-0000-0000-0000-000000000000", // Идентификатор сообщения. Для идентификации ответа (Не обязательно).
+    "Message": "Тест озвучки", // Текст сообщения.
+    "Voice": "Голос", // Голос.
+    "Pitch": "0" // Тон голоса (Если поддерживается, не обязательно).
   }
 }
 ```
@@ -236,10 +236,10 @@ VoiceArray = [ 'Maxim', 'Tatyana', 'Alice', 'Marusia', 'Svetlana', 'Dmitry', 'Er
 {
   "Type": "History",
   "Data": {
-    "Type": "Live",
-    "Limit": 100,
+    "Type": "Live", // Тип истории (Live).
+    "Limit": 100, // Максимальное количество элементов.
     "Filter": {
-      "Follow": false
+      "Follow": false // Типы событий (Что не исключено) (По умолчанию возврат всех возможных типов).
     }
   }
 }
