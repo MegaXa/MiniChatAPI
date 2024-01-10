@@ -1,7 +1,7 @@
 # MiniChat API
 
 **Текущая версия: 0.12.X**
-**Последнее обновление: 08.12.23**
+**Последнее обновление: 10.01.24**
 
 Для подключения к серверу чата следует использовать websocket соединение по адресу: [ws://localhost:4848/Chat](ws://localhost:4848/Chat)
 
@@ -289,6 +289,35 @@ VoiceArray = [ 'Maxim', 'Tatyana', 'Alice', 'Marusia', 'Svetlana', 'Dmitry', 'Er
 
 ```
 {"Type":"History","Data":{"Type":"Live","Limit":10,"Filter": {"Follow": false,"UnFollow": false}}}
+```
+
+#### **Запрос на получение статистики (Statistics):**
+
+```
+{
+  "Type": "Statistics",
+  "Data": {
+    "Type": "Live", // Тип статистики (Live).
+    "LiveType": "Unknown", // Если тип статистики "Live", то можно указать для фильтрации коллекции.
+    "Query": [
+      {
+        "Operator": "Count",
+        "Expression": "UserName == @0",
+        "Variables": ["MegaXa"]
+      }
+    ]
+  }
+}
+```
+
+**Примеры**:
+
+```
+Получить количество донатов с определенного сервиса.
+{"Type":"Statistics","Data":{"Type":"Live","Query":[{"Operator":"Count","Expression":"x => x.Service == @0","Variables":["DonationAlerts"]}]}}
+
+Получить топ поддержаших за все время.
+{"Type":"Statistics","Data":{"Type":"Live","LiveType":"Donation","Query":[{"Operator":"GroupBy","Expression":"UserName"},{"Operator":"Select","Expression":"new(Key as Name, Sum(Amount) as Amount)"},{"Operator":"OrderBy","Expression":"Amount"}]}}
 ```
 
 #### **REST API:**
