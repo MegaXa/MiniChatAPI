@@ -298,7 +298,7 @@ VoiceArray = [ 'Maxim', 'Tatyana', 'Alice', 'Marusia', 'Svetlana', 'Dmitry', 'Er
   "Type": "Statistics",
   "Data": {
     "Type": "Live", // Тип статистики (Live).
-    "LiveType": "Unknown", // Если тип статистики "Live", то можно указать для фильтрации коллекции.
+    "LiveType": "Unknown", // Если тип статистики "Live", то можно указать для фильтрации коллекции. Обязательный, если происходит фильтрация по специфичным свойствам события (Например по сумме поддержки).
     "Query": [
       {
         "Operator": "Count",
