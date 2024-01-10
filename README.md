@@ -309,7 +309,7 @@ VoiceArray = [ 'Maxim', 'Tatyana', 'Alice', 'Marusia', 'Svetlana', 'Dmitry', 'Er
   }
 }
 ```
-Доступные операторы в данный момент: Where, Cast, GroupBy, Select, OrderBy, Skip, Take, Count.
+Доступные операторы в данный момент: Where, Cast, GroupBy, Select, OrderBy, Reverse, Skip, Take, Count.
 Подробнее про работу Dynamic Linq можно почитать тут: [Dynamic Linq](https://dynamic-linq.net/basic-query-operators)
 
 **Примеры**:
