@@ -78,9 +78,11 @@
   ],
   "Reply": false, // Содержит ли сообщение обращение к владельцу канала.
   "Meta": { // Метаданные для сообщения.
-    "Me": false, // Сообщение отправлено с тегом "/me". Twitch.
-    "Login": "megaxa", // Логин. (Если отличается от отображаемого имени.)
-    "Highlighted": false // Выделенное сообщение.
+    "Me": false, // Сообщение отправлено с тегом "/me" (Twitch).
+    "Login": "megaxa", // Логин автора, если доступен.
+    "Highlighted": false, // Выделенное сообщение.
+    "Announcement": false, // Сообщение-анонс (Twitch).
+    "FirstMessage": false // Первое сообщение от автора (Twitch. VKPlay).
   }
 }
 ```
@@ -106,10 +108,15 @@
 * Tango
 * Rutube
 * Telegram
+* Discord
 * VKPlay
 * Boosty
 * QIWIDonate
+* Donatty
 * DonateStream
+* Bigo
+* Kick
+* StreamEngine
 
 #### **Список типов для конструктора сообщения (MessageKitType):**
 
