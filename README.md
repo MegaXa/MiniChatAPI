@@ -1,7 +1,7 @@
 # MiniChat API
 
 **Текущая версия: 0.12.X**
-**Последнее обновление: 18.01.24**
+**Последнее обновление: 26.08.24**
 
 Для подключения к серверу чата следует использовать websocket соединение по адресу: [ws://localhost:4848/Chat](ws://localhost:4848/Chat)
 
@@ -341,6 +341,25 @@ VoiceArray = [ 'Maxim', 'Tatyana', 'Alice', 'Marusia', 'Svetlana', 'Dmitry', 'Er
 
 Получить топ поддержаших за все время.
 {"Type":"Statistics","Data":{"Type":"Live","LiveType":"Donation","Query":[{"Operator":"GroupBy","Expression":"UserName"},{"Operator":"Select","Expression":"new(Key as Name, Sum(Amount) as Amount)"},{"Operator":"OrderBy","Expression":"Amount"}]}}
+```
+
+#### **Воспроизведение аудио (Playback):**
+
+Приходит, когда начинается и заканчивается воиспроизведение аудио, в данный момент только из MiniChat. Возможные состояния: None, Paused, Playing. Также возможно отправить запрос, например: 
+
+```
+{"Type":"Playback","Data":{"Service":"MiniChat"}}
+```
+Ответ:
+
+```
+{
+  "Type": "Playback",
+  "Data": {
+    "Service": "MiniChat",
+    "State":"None"
+  }
+}
 ```
 
 #### **REST API:**
