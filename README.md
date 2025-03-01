@@ -188,22 +188,22 @@
 
 ```
 {
-	"Type": "WidgetProperties",
-	"Data": {
-		"Type": "Plugin",
-		"FolderName": "Dev",
-		"ID": 0,
-		"Notify": false, // Необходимо ли уведомление о изменении в открытые соединения.
-		"Properties": {  // Новые параметры виджета.
-			"Repeater": [
-				{
-					"Enabled": false,
-					"Command": "!test",
-					"Message": "Hi!"
-				}
-			]
-		}
-	}
+  "Type": "WidgetProperties",
+  "Data": {
+    "Type": "Plugin",
+    "FolderName": "Dev",
+    "ID": 0,
+    "Notify": false, // Необходимо ли уведомление о изменении в открытые соединения.
+    "Properties": {  // Новые параметры виджета.
+      "Repeater": [
+        {
+          "Enabled": false,
+          "Command": "!test",
+          "Message": "Hi!"
+        }
+      ]
+    }
+  }
 }
 ```
 
