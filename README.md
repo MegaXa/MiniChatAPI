@@ -1,7 +1,7 @@
 # MiniChat API
 
-**Текущая версия: 0.12.X**
-**Последнее обновление: 26.08.24**
+**Текущая версия: 0.13.X**
+**Последнее обновление: 01.03.25**
 
 Для подключения к серверу чата следует использовать websocket соединение по адресу: [ws://localhost:4848/Chat](ws://localhost:4848/Chat)
 
@@ -83,6 +83,10 @@
     "Highlighted": false, // Выделенное сообщение.
     "Announcement": false, // Сообщение-анонс (Twitch).
     "FirstMessage": false // Первое сообщение от автора (Twitch. VKPlay).
+  },
+  "Meta": { // Флаги заданные MiniChat.
+    "Filters": ["Message", "UserName", "Command"], // Фильтры.
+    "Highlights": ["UserName", "Phrase"], Выделение.
   }
 }
 ```
@@ -93,6 +97,7 @@
 * MiniChat
 * Twitch
 * YouTube
+* YouTubeShorts
 * GoodGame
 * DonationAlerts
 * VK
@@ -117,6 +122,7 @@
 * Bigo
 * Kick
 * StreamEngine
+* ODA
 
 #### **Список типов для конструктора сообщения (MessageKitType):**
 
@@ -126,6 +132,7 @@
 * `URL` - Ссылка.
 * `Image` - Изображение.
 * `Sticker` - Стикер.
+* `Mention` - Обращение.
 
 #### **Типы "Live"событий (LiveType):**
 
@@ -140,6 +147,7 @@
 * `Raid`
 * `Winner`
 * `Custom`
+* `WatchStreak`
 
 #### **Типы валют для  "Live"событий типа "Reward" или "Support" (CurrencyType):**
 
@@ -173,6 +181,29 @@
     "FolderName": "Dev", // Имя каталога с виджетом.
     "ID": 0 // Номер профиля виджета.
   }
+}
+```
+
+Указание "Properties" позволяет изменить параметры виджета извне, а не через интерфейс.
+
+```
+{
+	"Type": "WidgetProperties",
+	"Data": {
+		"Type": "Plugin",
+		"FolderName": "Dev",
+		"ID": 0,
+		"Notify": false, // Необходимо ли уведомление о изменении в открытые соединения.
+		"Properties": {  // Новые параметры виджета.
+			"Repeater": [
+				{
+					"Enabled": false,
+					"Command": "!test",
+					"Message": "Hi!"
+				}
+			]
+		}
+	}
 }
 ```
 
