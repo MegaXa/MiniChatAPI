@@ -84,7 +84,7 @@
     "Announcement": false, // Сообщение-анонс (Twitch).
     "FirstMessage": false // Первое сообщение от автора (Twitch. VKPlay).
   },
-  "Meta": { // Флаги заданные MiniChat.
+  "Flags": { // Флаги заданные MiniChat.
     "Filters": ["Message", "UserName", "Command"], // Фильтры.
     "Highlights": ["UserName", "Phrase"], Выделение.
   }
